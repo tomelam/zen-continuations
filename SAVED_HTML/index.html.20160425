@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- The idea for the fixed-position header and the scrollable iframe
+     came from http://www.brunildo.org/test/iframe_h100_hea_foo_abs_6.html
+     after performing a Google search for 'fixed scrolling iframe'. -->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Zen experiments - state machine prototype 1</title>
+  <style type="text/css">
+    @import "dojo/dijit/themes/tundra/tundra.css";
+    @import "dojo/dojo/resources/dojo.css";
+    @import "css/zen.css";
+  </style>
+  <link rel="stylesheet" type="text/css" href="css/zen.css"/>
+  <script type="text/javascript" src="prototype.js"></script>
+  <script type="text/javascript" src="cssParser.js"></script>
+  <script type="text/javascript" src="dojo/dojo/dojo.js"
+	  data-dojo-config="parseOnLoad: true, async: false, modulePaths:{zen:'../../zen', aop:'../../aop'}">
+  </script>
+  <script type="text/javascript">
+    require([
+        "dojo/dom",        // needed for dojo.byId
+        "dijit/registry",  // needed for dijit.byId
+        "dojo/parser",     // needed for parseOnLoad to run
+        "dojo/_base/kernel",
+        "dojo/_base/loader",
+        "dojox/lang/aspect",
+	"dijit/form/ComboBox",
+        "dojox/layout/ContentPane",
+	"dojox/html/styles",
+	"dojox/data/CssRuleStore",
+        "zen/dojo",
+        "zen",
+	"zen/cssParser"
+    ],
+    // Callback for when above modules finish loading
+    function () {
+	console.debug("Modules are loaded");
+	dojo.addOnLoad(zen.init);
+	dojo.addOnLoad(zen.loadToolbox);
+    });
+  </script>
+  <script type="text/javascript" src="jsScheme/js/jsScheme.js"></script>
+</head>
+
+<body class="tundra">
+  <div id="header">
+    <div id="workingNode"></div>
+    <div id="message"></div>
+    <div id="zentools" style="height:115px"></div>
+    <div id="zenNode" style="position:absolute; top:115px; height:20px; margin:7px"></div>
+  </div>
+  <div id="ifra"><iframe src="zen_user.html" frameborder="0"></iframe></div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- The idea for the fixed-position header and the scrollable iframe
+     came from http://www.brunildo.org/test/iframe_h100_hea_foo_abs_6.html
+     after performing a Google search for 'fixed scrolling iframe'. -->
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>Zen experiments - state machine prototype 1</title>
+    <link rel="stylesheet" type="text/css" href="css/zen.css"/>
+    <script type="text/javascript" src="prototype.js"></script>
+    <script type="text/javascript" src="../dojo/dojo/dojo.js"
+	    djConfig="parseOnLoad: true, isDebug: true"></script>
+    <script type="text/javascript" src="zen.js"></script>
+    <script type="text/javascript" src="json2.js"></script>
+    <script type="text/javascript" src="jsScheme/js/jsScheme.js"></script>
+    <script type="text/javascript">
+      dojo.addOnLoad(zen.init);
+    </script>
+  </head>
+  
+  <body class="tundra">
+    <div id="header">
+      <div id="workingNode"></div>
+      <div id="message"></div>
+      <div id="zentools" style="height:115px"></div>
+      <div id="zenNode" style="position:absolute; top:115px; height:20px; margin:7px"></div>
+    </div>
+    <div id="ifra"><iframe src="zen_user.html" frameborder="0"></iframe></div>
+  </body>
+
+</html>

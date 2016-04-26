@@ -1,0 +1,63 @@
+;;;; -*- scheme -*-
+;;;;
+;;;; dev-tools.txt
+;;;;
+
+;; Copyright (c) 2010 Tom Elam
+;;
+;; Permission is hereby granted, free of charge, to any person
+;; obtaining a copy of this software and associated documentation
+;; files (the "Software"), to deal in the Software without
+;; restriction, including without limitation the rights to use, copy,
+;; modify, merge, publish, distribute, sublicense, and/or sell copies
+;; of the Software, and to permit persons to whom the Software is
+;; furnished to do so, subject to the following conditions:
+;;
+;; The above copyright notice and this permission notice shall be
+;; included in all copies or substantial portions of the Software.
+;;
+;; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+;; EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+;; MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+;; NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+;; BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+;; ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+;; CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+;; SOFTWARE.
+
+(define *developer-toolbox-description*
+  '((("div" ())
+    (("div" (("class" "zenToolbox")
+	     ("style" "background-color:#DAE6EF")))
+     ;;(("div" (("stylex" "{height:'166px',width:'220px',backgroundColor:'#DAE6EF'}")))
+     (("dijit" "layout.ContentPane")
+      (("center" ())
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'Clear the Canvas', onClick: zen1.cleanUpWebpage}"))))
+      
+      (("center" ())
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'Load HTML-Tag Tools', onClick: zen1.loadHTMLTagTools}"))))
+
+      (("center" ())
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'Load Dojo Tools', onClick: zen1.loadDojoTools}"))))
+
+      (("center" ())
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'Load Google Gadget Tools', onClick: zen1.loadGGTools}"))))
+
+      (("center" ())
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'Load My Saved Configuration', onClick: zen1.loadUserConfig}"))))
+
+      (("center" ())
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'Save My Configuration', onClick: zen1.saveUserConfig}"))))))
+     (("dojox"
+       "layout.FloatingPane"
+       "{title:'<img src=\"images/zen.jpg\" height=20 width=20>Main Controls',resizable:false,dockable:true,closable:false,style:'height:200px;width:225px;bottom:30px;right:30px;z-index:10;'}")))))
+
+;;(define *developer-insertion-point* (js-eval "document.getElementById('developerInsertionPoint')"))
+;;(insert-dom-branches *developer-toolbox-description* *zen-node*)
+(insert-dom-branches *developer-toolbox-description* *toolbox-insertion-point*)

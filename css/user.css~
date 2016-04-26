@@ -1,0 +1,62 @@
+<style type="text/css">
+html, body, iframe {
+	height: 100%;
+}
+body {
+	padding: 0;
+	margin: 0;
+	color: #000;
+	background-color: #0fe;
+}
+html {
+	overflow-y: hidden;
+}
+#head, #foot, #ifra, iframe {
+	position: absolute;
+	width: 100%;
+	left: 0;
+}
+#ifra {
+	top: 160px;
+	bottom: 50px;
+}
+iframe {
+	border: 0 none;
+/*	con la seguente IE7- fa schifezze: riserva spazio per v-scroll, ma poi
+	l'iframe non lo usa, eventuale v-scroll appare alla sinistra */
+/*	overflow-y: scroll; */
+}
+#head {
+	height: 160px;
+	top: 0;
+	background-color: #f66;
+}
+#foot {
+	height: 50px;
+	bottom: 0;
+	background-color: #0f0;
+}
+</style>
+<!--[if lt IE 7]><style>
+html {
+	padding: 100px 0 50px 0;
+}
+#ifra, iframe {
+	position: static;
+}
+#ifra {
+	height: 100%;
+}
+* html body {
+	padding /**/: 100px 0 50px 0;
+	overflow-y /**/: hidden;
+}
+</style><![endif]-->
+<!--[if IE 6]><style>
+/*	se c'e' v-scroll IE6 fa anche apparire h-scroll (width non tiene conto di v-scroll)
+	tranne quando iframe e' in quirks mode, oppure ha: html { overflow-y:scroll }
+#foot {
+	height: 66px;
+}
+*/
+</style><![endif]-->

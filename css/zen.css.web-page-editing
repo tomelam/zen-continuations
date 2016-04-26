@@ -1,0 +1,289 @@
+@import url(user.css);
+
+#zentools {
+    border: 8px;
+}
+#message {
+    height: 15px;
+    width: 150px;
+    margin: 4px;
+}
+.box {
+    position: relative;
+    height: 100px;
+    background-color: red;
+    border: 2px solid black;
+    padding: 8px;
+    margin: 4px;
+}
+.boxx {
+    position: relative;
+    height: 100px;
+    border: 2px solid black;
+    padding: 8px;
+    margin: 4px;
+}
+.visualRep {
+    width:135px;
+    #height:40px;
+    font-size:smaller;
+}
+.invisible {
+    visibility:hidden;
+}
+.zenDiagramFloatingPaneContent {
+    background-color:#C0C0C0;
+}
+.boxTable {
+    #margin:4px;
+    #border:1px solid #303030;
+    rules:rows;
+    background-color:#C0C0C0;
+}
+.boxTD1 {
+    
+    border-right:2px solid #808080;
+    border-bottom:2px solid #404040;
+    background-color:#ECECEC;
+    padding:4px;
+}
+.boxTD2 {
+    
+}
+.boxRow {
+    border:1px solid black;
+}
+/* Cool: body { background:url('../dojo/dojox/layout/tests/images/gridUnderlay.png') top left; } */
+
+@import "../dojo/dojo/resources/dojo.css";
+@import "../dojo/dijit/themes/dijit.css";
+@import "../dojo/dijit/themes/tundra/tundra.css";
+/* @import "../dojo/dijit/tests/css/dijitTests.css"; */
+@import "../dojo/dojox/layout/resources/FloatingPane.css";
+@import "../dojo/dojox/layout/resources/ResizeHandle.css";
+
+/*
+body { 
+        font: 10px Myriad,Helvetica,Tahoma,Arial,clean,sans-serif; 
+        *font-size: 75%;
+}
+*/
+
+.tundra .dijitSplitContainer-dijitContentPane,
+.tundra .dijitBorderContainer-dijitContentPane,
+.tundra .dijitBorderContainer {
+    padding: 0px;
+}
+.tundra .dijitButtonNode {
+	background: #fff url("../../zen/images/buttonEnabled.png") repeat-x bottom left;
+}
+/*
+.dijitContentPane
+.dijitLayoutContainer-dijitContentPane
+.dijitAlignLeft {
+    left: 1px;
+    right: 1px;
+}
+.tundra
+.dijitButtonNode {
+    border:1px solid black;
+}
+*/
+/*
+   For some reason, this causes problems until
+   I do something like exit Firebug!
+.tundra
+.zenToolbox
+.dijitButtonContents
+{
+    height: 42px; width: 70px;
+}
+*/
+.tundra
+.zenHTMLToolbox
+.dijitButtonContents
+{
+    height: 42px; width: 115px;
+}
+#zenLongButtons1 {width:200px}
+.zenTableIcon {
+    background-image: url('../images/table.png'); 
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+.zenDivIcon {
+    background-image: url('../images/div.png'); 
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+.zenTableRowIcon {
+    background-image: url('../images/row.png'); 
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+}
+.zenTableCellIcon {
+    background-image: url('../images/cell.png'); 
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+}
+.zenAccordionContainer {
+    background-image: url('../images/accordion_pane.png'); 
+    background-repeat: no-repeat;
+    width: 240px;
+    height: 128px;
+    margin: 0;
+    padding: 0;
+}
+.zenBorderContainer {
+    background-image: url('../images/border_container_0.png'); 
+    background-repeat: no-repeat;
+    width: 240px;
+    height: 133px;
+    margin: 0;
+    padding: 0;
+}
+.zenButton {
+    background-image: url('../images/button.png'); 
+    background-repeat: no-repeat;
+    width: 240px;
+    height: 51px;
+    margin: 0;
+    padding: 0;
+}
+.zenGGAmazon {
+    background-image: url('../images/Amazon.png'); 
+    background-repeat: no-repeat;
+    width: 159px;
+    height: 155px;
+    margin: 0;
+    padding: 0;
+}
+.zenGGCNN {
+    background-image: url('../images/CNN.png'); 
+    background-repeat: no-repeat;
+    width: 111px;
+    height: 73px;
+    margin: 0;
+    padding: 0;
+}
+.zenGGDateAndTime {
+    background-image: url('../images/DateAndTime.png'); 
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+}
+.zenGGDateAndTimeMultiUsage {
+    background-image: url('../images/DateAndTime-Multi-Usage.png'); 
+    background-repeat: no-repeat;
+    width: 166px;
+    height: 117px;
+    margin: 0;
+    padding: 0;
+}
+.zenGGDigg {
+    background-image: url('../images/Digg.png'); 
+    background-repeat: no-repeat;
+    width: 205px;
+    height: 188px;
+    margin: 0;
+    padding: 0;
+}
+.zenGGFish {
+    background-image: url('../images/Fish.png'); 
+    background-repeat: no-repeat;
+    width: 140px;
+    height: 91px;
+    margin: 0;
+    padding: 0;
+}
+.zenGGGoogleCalendar {
+    background-image: url('../images/GoogleCalendar.png'); 
+    background-repeat: no-repeat;
+    width: 147px;
+    height: 121px;
+    margin: 0;
+    padding: 0;
+}
+.zenGGGoogleNews {
+    background-image: url('../images/GoogleNews.png'); 
+    background-repeat: no-repeat;
+    width: 222px;
+    height: 166px;
+    margin: 0;
+    padding: 0;
+}
+.zenGGKlimt {
+    background-image: url('../images/Klimt.png'); 
+    background-repeat: no-repeat;
+    width: 138px;
+    height: 239px;
+    margin: 0;
+    padding: 0;
+}
+.zenGGMiniWeb {
+    background-image: url('../images/MiniWeb.png'); 
+    background-repeat: no-repeat;
+    width: 59px;
+    height: 114px;
+    margin: 0;
+    padding: 0;
+}
+.zenGGMultiRSSReader {
+    background-image: url('../images/Multi-RSSReader.png'); 
+    background-repeat: no-repeat;
+    width: 171px;
+    height: 106px;
+    margin: 0;
+    padding: 0;
+}
+.zenGGStockTicker {
+    background-image: url('../images/StockTicker.png'); 
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 142px;
+    margin: 0;
+    padding: 0;
+}
+.zenGGTime {
+    background-image: url('../images/Time.png'); 
+    background-repeat: no-repeat;
+    width: 266px;
+    height: 116px;
+    margin: 0;
+    padding: 0;
+}
+.zenGGTVShowsOnline {
+    background-image: url('../images/TVShowsOnline.png'); 
+    background-repeat: no-repeat;
+    width: 166px;
+    height: 113px;
+    margin: 0;
+    padding: 0;
+}
+.alternateDock {
+    position:absolute; 
+    background-color:#ededed; 
+    right:0px; top:0px; 
+    border-left:1px solid #ccc; 
+    height:100%; 
+}
+#alternateDock ul.dojoxDockList { display:block; }
+.testFixedSize {
+    width:300px;
+    height:1200px;
+    padding:7px;			
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <!-- The idea for the fixed-position header and the scrollable iframe
+       came from http://www.brunildo.org/test/iframe_h100_hea_foo_abs_6.html
+       after performing a Google search for 'fixed scrolling iframe'. -->
+
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>Zen experiments - state machine prototype 1</title>
+    <style type="text/css">
+      @import "dojo/dijit/themes/tundra/tundra.css";
+      @import "dojo/dojo/resources/dojo.css";
+      @import "css/zen.css";
+    </style>
+
+    <!-- FIXME: Make module loading (esp. aop/aspect, zen/dojo, and zen)
+         work with async:true.
+
+    http://www.sitepen.com/blog/2012/02/01/dojo-1-7-tutorial-update/
+    http://dojotoolkit.org/blog/dojo-1-7-released
+    http://livedocs.dojotoolkit.org/
+    http://livedocs.dojotoolkit.org/releasenotes/1.7
+    http://livedocs.dojotoolkit.org/dojo/registerModulePath
+    http://staging.dojotoolkit.org/api/
+    http://dojotoolkit.org/reference-guide/releasenotes/1.7.html
+    http://dojotoolkit.org/reference-guide/dojo/config.html
+    http://dojotoolkit.org/reference-guide/dojo/registerModulePath.html
+    http://dojotoolkit.org/documentation/tutorials/1.7/hello_dojo/
+    http://dojotoolkit.org/documentation/tutorials/1.7/dojo_config/
+    http://dojotoolkit.org/documentation/tutorials/1.7/cdn/
+    -->
+    <!--
+    <link rel="stylesheet" type="text/css" href="css/zen.css"/>
+    -->
+    <!-- <script type="text/javascript" src="prototype.js"></script> -->
+    <script type="text/javascript" src="zen/cssParser.js"></script>
+    <script type="text/javascript" src="dojo/dojo/dojo.js"
+	    data-dojo-config="parseOnLoad: true, async: false, modulePaths:{zen:'../../zen', aop:'../../aop'}">
+    </script>
+    <script type="text/javascript">
+        require(
+	    [
+		"dojo/dom",        // needed for dojo.byId
+		"dijit/registry",  // needed for dijit.byId
+		"dojo/parser",     // needed for parseOnLoad to run
+		"dojo/_base/kernel",
+		"dojo/_base/loader",
+		"dojox/lang/aspect",
+		"dijit/form/ComboBox",
+		"dojox/layout/ContentPane",
+		"dojox/html/styles",
+		"dojox/data/CssRuleStore",
+		"zen/dojo",
+		"zen",
+		"zen/cssParser"
+            ],
+            // Callback for when above modules finish loading
+            function () {
+		console.debug("Modules are loaded");
+		dojo.addOnLoad(zen.init);
+		dojo.addOnLoad(zen.loadToolbox);
+	    }
+	);
+      zen.copyRemotePageAndResize = function() {
+          dojo.byId("message").innerHTML = "The page was fetched. Please wait it is converted and inserted into the iframe ...";
+	  zen.copyRemotePage(dojo.byId("jsonIframe"), dojo.byId("transclusion"));
+	  targetIframe = dojo.byId("transclusion");
+	  console.log("targetIframe => " + targetIframe);
+	  dojo.attr(dojo.byId("transclusion"), "style",
+                    "width:" + remoteWidth + "px; height:" +
+	            remoteHeight + "px");
+          dojo.byId("message").innerHTML = "The page was converted and inserted into the iframe. All done!";
+      }
+      </script>
+      <!-- <script type="text/javascript" src="jsScheme/js/jsScheme.js"></script> -->
+
+  </head>
+  <body class="tundra">
+    <div>
+      <img id="zenLoadingImg" src="images/loading.gif" alt="loading" />
+    </div>
+    <div id="zen"></div>
+    <p>
+      This version of Zen-Rails is not optimized. It may be slow.
+    </p>
+    <h2>Very Rough Notes</h2>
+    <a href="doc/javascript.html">JavaScript</a><br />
+    <a href="doc/design.html">Design</a><br />
+    <a href="doc/features.html">Features</a>
+    <h2>Tests</h2>
+    <a href="runTests.html">Unit Tests</a>
+    <h2>Demo of Proxy-Assisted Loading of a<br />Web Page Snapshot into an Iframe<br />(as a "Transclusion")</h2>
+    Note: This demo won't work without special assistance from the web server to overcome the single-domain policy of web browsers.
+    <div id="snapshooter">
+    <button data-dojo-type="dijit.form.Button" type="button">Run it!
+    <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
+        dojo.byId("message").innerHTML = "Please wait while the remote page is being fetched ...";
+	dojo.query("#snapshooter").style({ display:"none" });
+        var jsonIframe = dojo.byId("jsonIframe");
+	// See http://bugs.dojotoolkit.org/ticket/9609
+        if (jsonIframe.addEventListener) {
+            jsonIframe.addEventListener("load", zen.copyRemotePageAndResize, false);
+        } else if (jsonIframe.attachEvent) {
+            jsonIframe.attachEvent("onload", zen.copyRemotePageAndResize);
+        }
+        jsonIframe.src = "web/facebook.com";
+    </script>
+    </button>
+    </div>
+    <div id="message"></div>
+    <iframe id="jsonIframe" style="width:100%; height:100px; display:none">
+    </iframe>
+    <br />
+    <iframe id="transclusion" style="display:none">
+    </iframe>
+    <br />
+    <div id="diagramPane" style="width:100%; height:10px; background-color:red; display:none;"></div>
+    <h2>Experiment with State Machine</h2>
+    <div id="header">
+      <div id="workingNode"></div>
+      <div id="message"></div> <!-- FIXME: De-duplicate this ID. -->
+      <div id="zentools" style="height:115px"></div>
+      <div id="zenNode" style="position:absolute; top:115px; height:20px; margin:7px"></div>
+    </div>
+    <div id="ifra"><iframe src="zen_user.html" frameborder="0"></iframe></div>
+  </body>
+</html>

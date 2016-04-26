@@ -1,0 +1,129 @@
+;;;; -*- scheme -*-
+;;;;
+;;;; gg.txt
+;;;;
+
+;; Copyright (c) 2010 Tom Elam
+;;
+;; Permission is hereby granted, free of charge, to any person
+;; obtaining a copy of this software and associated documentation
+;; files (the "Software"), to deal in the Software without
+;; restriction, including without limitation the rights to use, copy,
+;; modify, merge, publish, distribute, sublicense, and/or sell copies
+;; of the Software, and to permit persons to whom the Software is
+;; furnished to do so, subject to the following conditions:
+;;
+;; The above copyright notice and this permission notice shall be
+;; included in all copies or substantial portions of the Software.
+;;
+;; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+;; EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+;; MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+;; NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+;; BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+;; ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+;; CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+;; SOFTWARE.
+
+(set! *toolbox-description*
+  `(("div" (("class" "zenToolbox")))
+    (("table" (("style" "background-color:#DAE6EF;")))
+     (("tr" ())
+      (("td" (("align" "right")))
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'Amazon.com', onClick: zen1.storeSexp}"
+	  (insert-dom-branch-at-selection '(("iframe" (("type" "text/javascript")
+						       ("src" "http://www.gmodules.com/ig/ifr?url=http://www.microaxon.com/google_gadgets/amazon.xml&amp;synd=open&amp;w=320&amp;h=160&amp;title=amazon.com&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js")))))))))
+      (("td" ())
+       (("img" (("src" ,(string-append *images-base-url* "Amazon.png")))))))
+     (("tr" ())
+      (("td" (("align" "right")))
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'CNN.com', onClick: zen1.storeSexp}"
+	  (insert-dom-branch-at-selection '(("iframe" (("type" "text/javascript")
+						       ("src" "http://www.gmodules.com/ig/ifr?url=http://hosting.gmodules.com/ig/gadgets/file/112490972781671646997/CNNNews.xml&amp;up_clickurl=&amp;up_aiturl=&amp;synd=open&amp;w=320&amp;h=300&amp;title=CNN.com+News+And+Current+Events&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js")))))))))
+      (("td" ())
+       (("img" (("src" ,(string-append *images-base-url* "CNN.png")))))))
+     (("tr" ())
+      (("td" (("align" "right")))
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'Date and Time', onClick: zen1.storeSexp}"
+	  (insert-dom-branch-at-selection '(("iframe" (("type" "text/javascript")
+						       ("src" "http://www.gmodules.com/ig/ifr?url=http://adwebmaster.net/datetimemulti/datetimemulti.xml&amp;up_color=softgreen&amp;up_txtcolor=softnavy&amp;up_lang=en&amp;up_formattime=24%3A00%3A00&amp;up_timezoneadd=0&amp;up_startcalendar=0&amp;up_elementscached=1&amp;up_affactualtime=1&amp;up_afftimesec=0&amp;up_affcalendar=1&amp;up_affcalendarlongday=0&amp;up_affbigpub072008=1&amp;synd=open&amp;w=320&amp;h=182&amp;title=Date and Time - Multi-Usage&amp;lang=all&amp;country=ALL&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js")))))))))
+      (("td" ())
+       (("img" (("src" ,(string-append *images-base-url* "DateAndTime-Multi-Usage.png")))))))
+     (("tr" ())
+      (("td" (("align" "right")))
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'Digg', onClick: zen1.storeSexp}"
+	  (insert-dom-branch-at-selection '(("iframe" (("type" "text/javascript")
+						       ("src" "http://www.gmodules.com/ig/ifr?url=http://digg.com/goog/ig.xml&amp;up_user=&amp;up_thumbnail=1&amp;up_filter=0&amp;up_num=5&amp;up_type=popular&amp;up_refresh=0&amp;up_tab=0&amp;up_offset=0&amp;up_pagination=0&amp;up_1001=true&amp;up_1002=true&amp;up_1005=true&amp;up_1006=true&amp;up_1022=true&amp;up_1003=true&amp;up_1007=true&amp;up_1023=true&amp;synd=open&amp;w=160&amp;h=160&amp;title=Digg&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js")))))))))
+      (("td" ())
+       (("img" (("src" ,(string-append *images-base-url* "Digg.png")))))))
+     (("tr" ())
+      (("td" (("align" "right")))
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'Fish', onClick: zen1.storeSexp}"
+	  (insert-dom-branch-at-selection '(("iframe" (("type" "text/javascript")
+						       ("src" "http://www.gmodules.com/ig/ifr?url=http://fishgadget.googlecode.com/svn/trunk/fish.xml&amp;up_fishColor=none&amp;up_fishName=Fish&amp;up_backgroundColor=F0F7FF&amp;up_backgroundImage=http%3A%2F%2F&amp;up_numFish=8&amp;up_fishColor1=F45540&amp;up_fishColor2=000000&amp;up_fishColor3=F0F7FF&amp;up_fishColor4=97B6A6&amp;up_fishColor5=BFD1C1&amp;up_fishColor6=33CC33&amp;up_fishColor7=FEB859&amp;up_fishColor8=FFFFFF&amp;up_fishColor9=FFE114&amp;up_fishColor10=F45540&amp;up_foodColor=FCB347&amp;up_userColor1=&amp;up_userColor2=&amp;up_userColor3=&amp;up_userColor4=&amp;up_userColor5=&amp;synd=open&amp;w=160&amp;h=160&amp;title=Fish&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js")))))))))
+      (("td" ())
+       (("img" (("src" ,(string-append *images-base-url* "Fish.png")))))))
+     (("tr" ())
+      (("td" (("align" "right")))
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'Google Calendar', onClick: zen1.storeSexp}"
+	  (insert-dom-branch-at-selection '(("iframe" (("type" "text/javascript")
+						       ("src" "http://www.gmodules.com/ig/ifr?url=http://www.google.com/ig/modules/calendar3.xml&amp;up_calendarFeeds=&amp;up_calendarColors=&amp;up_firstDay=0&amp;up_dateFormat=0&amp;up_timeFormat=1%3A00pm&amp;up_showDatepicker=1&amp;up_hideAgenda=0&amp;up_showEmptyDays=0&amp;up_showExpiredEvents=1&amp;synd=open&amp;w=160&amp;h=160&amp;title=Google+Calendar&amp;lang=en&amp;country=ALL&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js")))))))))
+      (("td" ())
+       (("img" (("src" ,(string-append *images-base-url* "GoogleCalendar.png")))))))
+     (("tr" ())
+      (("td" (("align" "right")))
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'Google News', onClick: zen1.storeSexp}"
+	  (insert-dom-branch-at-selection '(("iframe" (("type" "text/javascript")
+						       ("src" "http://www.gmodules.com/ig/ifr?url=http://hosting.gmodules.com/ig/gadgets/file/104342096967082496017/google-news.xml&amp;up_ned=&amp;up_items=6&amp;up_show_image=1&amp;up_font_size=12pt&amp;up_selectedTab=0&amp;up_tabs=&amp;up_last_url=&amp;up_onebox=&amp;synd=open&amp;w=320&amp;h=300&amp;title=Google+News&amp;lang=en&amp;country=ZW&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js")))))))))
+      (("td" (("colspan" "5")))
+       (("img" (("src" ,(string-append *images-base-url* "GoogleNews.png")))))))
+     (("tr" ())
+      (("td" (("align" "right")))
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'Art of the Day', onClick: zen1.storeSexp}"
+	  (insert-dom-branch-at-selection '(("iframe" (("type" "text/javascript")
+						       ("src" "http://www.gmodules.com/ig/ifr?url=http://artoftheday.googlepages.com/Art.xml&amp;up_wpid=0&amp;up_urlp=0&amp;up_imgsrc=fineart&amp;up_bg=white&amp;up_language=Detect&amp;synd=open&amp;w=320&amp;h=300&amp;title=Art+of+the+Day&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js")))))))))
+      (("td" ())
+       (("img" (("src" ,(string-append *images-base-url* "Art2.jpg")))))))
+     (("tr" ())
+      (("td" (("align" "right")))
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'Mini-Web', onClick: zen1.storeSexp}"
+	  (insert-dom-branch-at-selection '(("iframe" (("type" "text/javascript")
+						       ("src" "http://gmodules.com/ig/ifr?url=http://blog.outer-court.com/homepage/miniweb.xml&amp;synd=open&amp;w=170&amp;h=170&amp;title=Mini+Web&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js")))))))))
+      (("td" ())
+       (("img" (("src" ,(string-append *images-base-url* "MiniWeb3.jpg")))))))
+     (("tr" ())
+      (("td" (("align" "right")))
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'Multi-Feed News', onClick: zen1.storeSexp}"
+	  (insert-dom-branch-at-selection '(("iframe" (("type" "text/javascript")
+						       ("src" "http://www.gmodules.com/ig/ifr?url=http://orawiz.googlepages.com/multifeed.xml&amp;up_mfeed=http%3A%2F%2Fgoogleblog.blogspot.com%2Fatom.xml%7Chttp%3A%2F%2Fwww.rediff.com%2Frss%2Finrss.xml&amp;up_mcssfile=http%3A%2F%2Forawiz.googlepages.com%2Ff1.css&amp;up_contentsnum=9&amp;up_titlelink=http%3A%2F%2Fgoogleblog.blogspot.com%2F&amp;synd=open&amp;w=240&amp;h=260&amp;title=Multiple+RSS+Feeds+Reader&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js")))))))))
+      (("td" ())
+       (("img" (("src" ,(string-append *images-base-url* "Multi-RSSReader.png")))))))
+     (("tr" ())
+      (("td" (("align" "right")))
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'Stock Ticker', onClick: zen1.storeSexp}"
+	  (insert-dom-branch-at-selection '(("iframe" (("type" "text/javascript")
+						       ("src" "http://www.gmodules.com/ig/ifr?url=http://padmanijain.googlepages.com/z202.xml&amp;up_NAMES=%5EDJI%2C%5EIXIC%2CCSCO&amp;synd=open&amp;w=300&amp;h=90&amp;title=Stock+Ticker&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js")))))))))
+      (("td" ())
+       (("img" (("src" ,(string-append *images-base-url* "StockTicker.png")))))))
+     (("tr" ())
+      (("td" (("align" "right")))
+       (("div" ())
+	(("dijit" "form.Button" "{label: 'TV Shows Online', onClick: zen1.storeSexp}"
+	  (insert-dom-branch-at-selection '(("iframe" (("type" "text/javascript")
+						       ("src" "http://www.gmodules.com/ig/ifr?url=http://hosting.gmodules.com/ig/gadgets/file/101463307027941272586/wso_gadget.xml&amp;synd=open&amp;w=320&amp;h=170&amp;title=Watch+shows+online&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js")))))))))
+      (("td" ())
+       (("img" (("src" ,(string-append *images-base-url* "TVShowsOnline.png"))))))))
+    (("dojox" "layout.FloatingPane" "{title:'Google Gadgets - Zen',resizable:true,dockable:true,closable:true,style:'width:412px;height:502px;top:60px;right:230px;z-index:6;'}" "" "zenToolbox"))))
+(insert-dom-branch *toolbox-description* *toolbox-insertion-point*)
+

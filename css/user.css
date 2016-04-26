@@ -1,0 +1,23 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+#header, #ifra, iframe {
+    /* position: absolute; */
+    width: 100%;
+    left: 0;
+}
+#ifra {
+    height: 100%;
+    top: 140px;
+    bottom: 0px;
+}
+iframe {
+    border: 2px solid gray;
+    height: 100%;
+}
+#header {
+    height: 115px;
+    top: 0;
+    background-color: #dae6ff;
+}

@@ -1,0 +1,86 @@
+* NOTES
+
+** zen.createNew
+zen.createNew is a simplification and consolidation of a simulated
+'new' operator as given in Chapter 5 of _JavaScript: The Good Parts_,
+by Douglas Crockford. Courtesy of Eric Bréchemier (on
+stackoverflow.com; see http://bit.ly/9PiU5W). I have made significant
+corrections and added arguments to the constructor.
+    
+This function is not just for educational purposes: it allows any kind
+of object to be created in a more functional way than the 'new'
+operator allows, because it allows the object's constructor to be
+passed to a function and then called there to create the new object.
+
+** ATTEMPT TO USE IFRAMES
+We want to use either frames or iframes (probably iframes, but
+we're not 100% sure yet) to separate the Zen tools from the Zen
+user's web design and application. One of the main reasons is
+because we want to be able to prevent Zen's controls at the
+exact top of the browser window, never moving in any direction,
+while the Zen user's web page scrolls up and down and side to
+side. When xframes become de riguer, we'll switch to those.
+
+Iframes are inline elements like img elements. Therefore they
+are part of the main page's DOM document. Thus iframes have the
+advantage over frames that you can put other elements on top of
+or underneath iframe elements. A good example is a menu that
+slides out across iframe elements.
+
+Another of the main reasons we want to use either frames or
+iframes is because we want to be able to add Zen to a web page
+without disturbing what has already been coded in it. If we
+used DIVs instead of frames or iframes, it might disturb the
+expected order of elements. Keeping the Zen user's document
+separate and having Zen manipulate it through the browser will
+not be foolproof (see unframeable_webpage.html for an example
+of a page that could not be manipulated by Zen), but it will be
+closer to foolproof than using DIVs.
+
+[Insert paper notes from my Zen file here.]
+
+See Steve Souder's blog post
+'http://www.stevesouders.com/blog/2009/06/03/using-iframes-sparingly/'.
+In that post, he wrote:
+
+	Iframes Block Onload
+
+	It’s important that the window’s onload event fire as soon as
+	possible. This causes the browser’s busy indicators to stop,
+	letting the user know that the page is done loading. When the
+	onload event is delayed, it gives the user the perception that
+	the page is slower.
+
+	The window’s onload event doesn’t fire until all its iframes,
+	and all the resources in these iframes, have fully loaded. In
+	Safari and Chrome, setting the iframe’s SRC dynamically via
+	JavaScript avoids this blocking behavior.
+
+** FIXED-POSITION ZEN TOOLS PROBLEMS
+In attempting to get the Zen tools to stay in one place in the
+browser window while scrolling the rest of the page, I thought
+I would move the Zen user's DOM elements to a dynamically
+generated iframe, but this has the problem that the user's
+access to DOM nodes might get broken. This is true whether the
+elements are removed from the original page and shifted to the
+new iframe, or the page is reloaded with a hash (as a flag) in
+the URL to signal the JavaScript code to stop recursing on the
+HTML. ('Stop recursing' here would mean one recursion level is
+what's required.)
+
+Instead of using iframes, divs with fixed positioning should do
+the job -- except in Internet Explorer 6. No solution to that
+problem is 100% ideal, but there are workarounds on the Web.
+Here are some Google searches and some solutions they picked up:
+
+Google search "fixed position internet explorer 6"
+http://www.howtocreate.co.uk/fixedPosition.html
+http://ryanfait.com/resources/fixed-positioning-in-internet-explorer/
+
+Google search "how to simulate iframe"
+http://stackoverflow.com/questions/2564947/css-html-how-to-simulate-iframe-with-css
+http://stackoverflow.com/questions/1061684/how-can-i-simulate-an-anchor-click-within-iframe-via-javascript
+
+** DOCTYPE
+Previously I used the following doctype declaration:
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">

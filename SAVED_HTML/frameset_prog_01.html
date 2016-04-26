@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Frames</title>
+    <script type="text/javascript" src="../dojo/dojo/dojo.js"></script>
+    <script type="text/javascript">
+      init = function() {
+	  fs = document.createElement('frameset');
+	  fs.rows="25%,*,25%";
+	  document.body.parentNode.appendChild(fs);
+	  f1 = document.createElement('frame');
+	  f1.src = "http://google.com";
+	  fs.appendChild(f1);
+	  f2 = document.createElement('frame');
+	  f2.src = "http://yahoo.com";
+	  fs.appendChild(f2);
+	  f3 = document.createElement('frame');
+	  f3.src = "http://cnn.com";
+	  fs.appendChild(f3);
+	  var body=dojo.byId("body");
+	  body.parentNode.removeChild(body);
+      };
+      dojo.addOnLoad(init);
+    </script>
+  </head>
+<body id="body">
+</body>
+</html>

@@ -1,0 +1,566 @@
+;;;; -*- scheme -*-
+;;;;
+;;;; html.txt
+;;;;
+
+;; Copyright (c) 2010 Tom Elam
+;;
+;; Permission is hereby granted, free of charge, to any person
+;; obtaining a copy of this software and associated documentation
+;; files (the "Software"), to deal in the Software without
+;; restriction, including without limitation the rights to use, copy,
+;; modify, merge, publish, distribute, sublicense, and/or sell copies
+;; of the Software, and to permit persons to whom the Software is
+;; furnished to do so, subject to the following conditions:
+;;
+;; The above copyright notice and this permission notice shall be
+;; included in all copies or substantial portions of the Software.
+;;
+;; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+;; EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+;; MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+;; NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+;; BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+;; ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+;; CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+;; SOFTWARE.
+
+(set! *default-page-description*
+  '((("div" (("class" "zenHTMLToolbox")))
+     (("div" ())
+      (("div" (("class" "zenHTMLToolbox")))
+       (("dijit" "layout.AccordionContainer" "{style:'width:160px;height:465px;top:35px;right:5px;position:absolute;z-index:100'}")
+	(("div" ())
+	 (("dijit" "layout.AccordionPane" "{selected:true,title:'Text'}")
+	  (("content" (("div" (("stylex" "{height:'314px',width:'100%',backgroundColor:'#DAE6EF'}")))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "Text"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("text" "This is text.")))
+			   ()
+			   "b,big,blink,font,i,nobr,s,small,strike,sub,sup,tt,u,abbr,acronym,cite,code,dfn,em,inlineinput,kbd,q,samp,span,spell,strong,var,a,address,bdo,button,caption,dt,hx,ilayer,label,legend,marquee,p,ruby,div"))))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "Address"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("address" ())
+							     (("text" "123 Main Street, Bloomington, IN"))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Block"))
+			  (("br" ()))
+			  (("text" "Quote")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("blockquote" ())
+							     (("text" "This is a block quote."))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Preformatted"))
+			  (("br" ()))
+			  (("text" "Text")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("pre" ())
+							     (("text" "This is preformatted text."))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Inserted"))
+			  (("br" ()))
+			  (("text" "Text")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("ins" ())
+							     (("text" "This is inserted text."))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Deleted"))
+			  (("br" ()))
+			  (("text" "Text")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("del" ())
+							     (("text" "This is deleted text.")))))))))))))
+
+	(("div" ())
+	 (("dijit" "layout.AccordionPane" "{selected:false,title:'Blocks'}")
+	  (("content" (("div" (("stylex" "{height:'413px',width:'100%',backgroundColor:'#DAE6EF'}")))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "H1"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("h1" ())
+							     (("text" "H1 Heading"))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "H2"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("h2" ())
+							     (("text" "H2 Heading"))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "H3"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("h3" ())
+							     (("text" "H3 Heading")))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "H4"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("h4" ())
+							     (("text" "H4 Heading"))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "H5"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("h5" ())
+							     (("text" "H5 Heading"))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "Center"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("center" ())
+							     (("text" "Centered Area"))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "Paragraph"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("p" ())
+							     (("text" "This is a paragraph."))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Div"))
+			  (("br" ()))
+			  (("text" "(Container)")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("div" (("stylex" "{height:'100px', width:'100px', backgroundColor:'pink'}")))))))))))))))
+
+	(("div" ())
+	 (("dijit" "layout.AccordionPane" "{selected:false,title:'Lists'}")
+	  (("content" (("div" (("stylex" "{height:'314px',width:'100%',backgroundColor:'#DAE6EF'}")))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Definition"))
+			  (("br" ()))
+			  (("text" "List")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("dl" (("style" "width:350px;height:100px;background-color:lightblue")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Definition"))
+			  (("br" ()))
+			  (("text" "Term")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("dt" ())
+							     (("text" "zen"))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Definition"))
+			  (("br" ()))
+			  (("text" "Description")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("dd" ())
+							     (("text" "form of Buddhism: a major school of Buddhism originating in 12th-century China that emphasizes enlightenment through meditation and insight [Early 18th century. Via Japanese zen and Chinese chán< Sanskrit dhyānam]"))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Ordered"))
+			  (("br" ()))
+			  (("text" "List")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("ol" (("style" "width:200px;height:160px;background-color:lightblue")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Unordered"))
+			  (("br" ()))
+			  (("text" "List")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("ul" (("style" "width:200px;height:80px;background-color:lightblue")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "List"))
+			  (("br" ()))
+			  (("text" "Item")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("li" (("style" "background-color:lightblue"))))))))))))))
+
+	(("div" ())
+	 (("dijit" "layout.AccordionPane" "{selected:false,title:'Tables'}")
+	  (("content" (("div" (("stylex" "{height:'262px',width:'100%',backgroundColor:'#DAE6EF'}")))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "Table, one cell"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("table" (("style" "width:300px;height:150px;background-color:lightyellow")))
+							     (("tr" (("height" "50px")))
+							      (("td" (("style" "width:48px;height:45px;background-color:#C0C0C0")))))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "Header"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection `(("thead" ())
+							     (("tr" (("height" "10px")))
+							      (("td" (("background"
+								       ,(string-append *images-base-url* "cell-background2.png"))))))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "Footer"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection `(("tfoot" ())
+							     (("tr" (("height" "10px")))
+							      (("td" (("background"
+								       ,(string-append *images-base-url* "cell-background3.png"))))))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Column"))
+			  (("br" ()))
+			  (("text" "Group")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("colgroup" ())))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "Caption"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("caption" ())
+							     (("text" "This is a table caption."))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Row with style,"))
+			  (("br" ()))
+			  (("text" "one cell")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("tr" (("style" "height:100%;")))
+							     (("td" (("style" "width:48px;height:45px;background-color:#C0C0C0"))))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "Row, one cell"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("tr" (("height" "50px")))
+							     (("td" (("style" "width:48px;height:45px;background-color:#C0C0C0"))))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "Cell"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("td" (("style" "width:48px;height:45px;background-color:#C0C0C0")))))))))
+		       
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Header"))
+			  (("br" ()))
+			  (("text" "Cell")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("th" (("style" "width:48px;height:15px;background-color:#C0C0C0"))))))))))))))
+
+	(("div" ())
+	 (("dijit" "layout.AccordionPane" "{selected:false,title:'Forms'}")
+	  (("content" (("div" (("stylex" "{height:'1025px',width:'100%',backgroundColor:'#DAE6EF'}")))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Form"))
+			  (("br" ()))
+			  (("text" "(Get Method)")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("form" (("stylex" "{width:'300px', height:'200px', backgroundColor:'yellow'}")
+								      ("method" "get")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Form"))
+			 (("br" ()))
+			 (("text" "(Post Method)")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("form" (("stylex" "{width:'300px', height:'200px', backgroundColor:'yellow'}")
+								      ("method" "post")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "Fieldset"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("fieldset" (("stylex"
+									   "{width:'300px',height:'48px',backgroundColor:'lightyellow'}")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Fieldset"))
+			  (("br" ()))
+			  (("text" "Legend")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("legend" (("stylex"
+									 "{width:'30px',height:'20px',backgroundColor:'papayawhip'}")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Button"))
+			  (("br" ()))
+			  (("text" "(not Input Tag)")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("button" (("stylex" "{width:'150px',height:'80px',backgroundColor:'lightblue'}")))
+							     (("text" "This is a plain"))
+							     (("br" ()))  ;; IE 7 doesn't wrap the text.
+							     (("text" "(HTML-only)"))
+							     (("br" ()))
+							     (("text" "button surrounding"))
+							     (("br" ()))
+							     (("text" "a text node"))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Submit"))
+			  (("br" ()))
+			  (("text" "Button")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("input" (("type" "submit")
+								       ("name" "submit 1")
+								       ("value" "Submit this form!")
+								       ("size" "30")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Reset"))
+			  (("br" ()))
+			  (("text" "Button")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("input" (("type" "reset")
+								       ("name" "reset 1")
+								       ("value" "Reset this form!")
+								       ("size" "30")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Input"))
+			  (("br" ()))
+			  (("text" "type=button")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("input" (("type" "button")
+								       ("name" "button input 1")
+								       ("value" "This is a button-input value.")
+								       ("size" "30")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Input"))
+			  (("br" ()))
+			  (("text" "type=image")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection `(("input" (("type" "image")
+								       ("name" "submit 1")
+								       ("src" ,(string-append *images-base-url* "submit.png"))
+								       ("name" "submit 2")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "Checkbox"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("input" (("type" "checkbox")
+								       ("name" "checkbox 1")
+								       ("value" "Yes")
+								       ("size" "30")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Radio"))
+			  (("br" ()))
+			  (("text" "Button")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("input" (("type" "radio")
+								       ("name" "radio 1")
+								       ("value" "One")
+								       ("size" "30")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Text"))
+			  (("br" ()))
+			  (("text" "Input")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("input" (("type" "text")
+								       ("name" "text input 1")
+								       ("value" "This is a default input value.")
+								       ("size" "30")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Password"))
+			  (("br" ()))
+			  (("text" "Input")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("input" (("type" "password")
+								       ("size" "30")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "File"))
+			  (("br" ()))
+			  (("text" "Input")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("input" (("type" "file")
+								       ("name" "html_file")
+								       ("accept" "text/html")
+								       ("size" "30")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "Label"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '((("p" ()))
+							     (("select" (("stylex"
+									  "{width:'200px', height:'20px', backgroundColor:'lightblue'}")
+									 ("name" "sections"))))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Select -"))
+			  (("br" ()))
+			  (("text" "Single Selection")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branches-at-selection '((("p" ()))
+							       (("select" (("stylex"
+									    "{width:'200px', height:'20px', backgroundColor:'lightblue'}")
+									   ("name" "sections"))))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Select -"))
+			  (("br" ()))
+			  (("text" "Multiple Selections")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branches-at-selection '((("p" ()))
+							       (("select" (("stylex"
+									    "{width:'200px', height:'50px', backgroundColor:'lightblue'}")
+									   ("name" "sections")
+									   ("multiple" ""))))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "Option"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("option" (("stylex" "{width:'200px', height:'15px', backgroundColor:'lightblue'}")
+									("label" "option X"))) ;; Used by IE.
+							     (("text" "option X"))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Option"))
+			 (("br" ()))
+			 (("text" "Group")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("optgroup" (("label" "Firefox")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Textarea"))
+			  (("br" ()))
+			  (("text" "(Multi-Line)")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("textarea" (("stylex"
+									   "{width:'200px', height:'60px', backgroundColor:'lightblue'}")
+									  ("name" "text area 1")
+									  ("rows" "3")
+									  ("cols" "25")
+									  ("accesskey" "t")
+									  ("tabindex" "1"))))))))))))))
+
+	(("div" ())
+	 (("dijit" "layout.AccordionPane" "{selected:false,title:'Special Inline Elements'}")
+	  (("content" (("div" (("stylex" "{height:'298px',width:'100%',backgroundColor:'#DAE6EF'}")))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Anchor -"))
+			  (("br" ()))
+			  (("text" "Link")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("a" (("stylex" "{width:'30px', height:'20px', backgroundColor:'yellow'}")
+								   ("href" "#destination_1")))
+							     (("text" "Click here to go to Destination #1."))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Anchor -"))
+			  (("br" ()))
+			  (("text" "Destination")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("a" (("stylex" "{width:'30px', height:'20px', backgroundColor:'yellow'}")
+								   ("name" "destination_1")))
+							     (("text" "This is Destination #1."))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("div" ())
+			  (("text" "Line Break -"))
+			  (("br" ()))
+			  (("text" "BR")))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection '(("br" (("stylex" "{width:'30px', height:'20px', backgroundColor:'yellow'}")))))))))
+
+		       (("center" ())
+			(("button" ())
+			 (("text" "Image"))
+			 (("dijit" "form.Button" "{onClick: zen1.storeSexp}"
+			   (insert-dom-branch-at-selection `(("img" (("stylex" "{width:'200px', height:'286px', backgroundColor:'yellow'}")
+								     ("src" ,(string-append *images-base-url* "mona.jpg"))
+								     ("name" "mona")
+								     ("alt" "Mona Lisa")))
+							     (("text" "This is an image."))))))))))))))))
+
+     (("dojox" "layout.FloatingPane" "{title:'<img src=\"images/zen.jpg\" height=20 width=20>HTML Tags',id:'htmlTools',resizable:false,dockable:true,closable:true,style:'width:170px;height:502px;top:30px;right:30px;z-index:6;'}" "" "zenToolbox")))))
+
+;;(insert-dom-branches *default-page-description* *zen-node*)
+(insert-dom-branches *default-page-description* *toolbox-insertion-point*)

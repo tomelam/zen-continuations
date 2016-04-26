@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>HTML to contain some JSON code</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <div><textarea style="width: 100%; height: 100px;" cols="1" rows="1">
+    ["dijit.TitlePane",
+     {id:"testRendering",
+      title:"Toolbar (click to expand) - Zen Notebook",
+      style:{top:"30px",right:"30px"},closable:true,open:false},
+     [["CENTER", {},
+       [["dijit.form.Button",
+	 {label:"Clear the Canvas",
+	  onClick:function() {
+	      alert("Currently this button is broken.");
+	      zen.clearTheCanvas(topComponents);
+	      topCompons = [];
+	  }},
+	 []],
+        ["BR", {}, []],
+	["dijit.form.Button",
+	 {label:"red DIV",onClick:function(){test(tree1)}}, []],
+	["dijit.form.Button",
+	 {label:"red DIV with orange DIV",onClick:function(){test(tree2)}}, []],
+	["dijit.form.Button",
+	 {label:"red DIV with table",onClick:function(){test(tree3)}}, []],
+	["dijit.form.Button",
+	 {label:"DIV with P and red ContentPane",
+	  onClick:function(){test(tree4)}}, []],
+        ["BR", {}, []],
+	//FIXME: ["text", {}, []],
+        //["BR", {}, []],
+	["dijit.form.Button",
+	 {label:"DIV with&lt;br />ContentPane (class:box)",
+	  onClick:function(){test(tree5)}}, []],
+	["dijit.form.Button",
+	 {label:"DIV with P &amp; red ContentPane&lt;br />with box ContentPane with DIV",
+	  onClick:function(){test(tree6)}}, []],
+	["dijit.form.Button",
+	 {label:"Iframe",
+	  onClick:function(){
+	    test(tree11);
+	  }}, []],	
+	["dijit.form.Button",
+	 {label:"Iframe click handler",
+	  onClick:function(){
+	    dojo.addOnLoad(function() {
+	      var ibody = dojo.query("body>div>iframe#iframe")[0].contentDocument.body;
+	      dojo.connect(
+		ibody,
+	        "onclick",
+	        null,
+	        function(ev) { alert('clicked on body'); dojo.stopEvent(ev); }
+	      );
+	    });
+	    alert("Added click handler for the Iframe");
+	  }}, []],	
+	["dijit.form.Button",
+	 {label:"AccordionContainer&lt;br />with AccordionPanes, each with DIV",
+	  onClick:function(){test(tree9)}}, []],
+	["dijit.form.Button",
+	 {label:"AccordionContainer&lt;br />with AccordionPanes, each with DIV",
+	  onClick:function(){test(tree10)}}, []]]]]]
+	    </textarea></div>
+	</body>
+</html>

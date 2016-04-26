@@ -1,0 +1,669 @@
+;;;; -*- scheme -*-
+;;;;
+;;;; dojo.txt
+;;;;
+
+;; Copyright (c) 2010 Tom Elam
+;;
+;; Permission is hereby granted, free of charge, to any person
+;; obtaining a copy of this software and associated documentation
+;; files (the "Software"), to deal in the Software without
+;; restriction, including without limitation the rights to use, copy,
+;; modify, merge, publish, distribute, sublicense, and/or sell copies
+;; of the Software, and to permit persons to whom the Software is
+;; furnished to do so, subject to the following conditions:
+;;
+;; The above copyright notice and this permission notice shall be
+;; included in all copies or substantial portions of the Software.
+;;
+;; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+;; EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+;; MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+;; NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+;; BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+;; ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+;; CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+;; SOFTWARE.
+
+(set! *default-page-description*
+  '((("div" (("class" "zenToolbox")))
+     (("div" ())
+      (("div" (("class" "zenToolbox")))
+       (("dijit" "layout.AccordionContainer" "{style:'width:405px;height:465px;top:35px;right:5px;position:absolute;z-index:100'}")
+
+	(("div" ())
+	 (("dijit" "layout.AccordionPane" "{selected:false,title:'Form, Validation, and Specialized Input Widgets'}")
+	  (("content" (("div" (("stylex" "{height:'893px',width:'100%',backgroundColor:'#DAE6EF'}")))
+		       (("table" (("style" "background-color:#C8C8E0")
+				  ("cellspacing" "0px"))) ;9898B0
+
+			(("tr" (("style" "height:83px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'CheckBox', onClick: zen1.storeSexp}"
+			     (insert-dom-branches-at-selection '((("label" (("for" "cb")))
+								  (("text" " Are you a Developer? ")))
+								 (("input" (("id" "cb")
+									    ("name" "developer")
+									    ("checked" "checked")
+									    ("value" "on")
+									    ("type" "checkbox")))
+								  (("dijit" "form.CheckBox" "{}" () () "div")))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/checkbox.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:17px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'RadioButton', onClick: zen1.storeSexp}"
+			     (insert-dom-branches-at-selection '(
+								 (("input" (("id" "pref1")
+									    ("name" "album")
+									    ("checked" "checked")
+									    ("value" "mettalica")
+									    ("type" "radio"))))
+								 (("label" (("for" "pref1")))
+								  (("text" " Metallica ")))
+								 (("input" (("id" "pref2")
+									    ("name" "album")
+									    ("checked" "checked")
+									    ("value" "slayer")
+									    ("type" "radio"))))
+								 (("label" (("for" "pref2")))
+								  (("text" " Slayer ")))
+								 (("input" (("id" "pref3")
+									    ("name" "album")
+									    ("value" "extreme")
+									    ("type" "radio"))))
+								 (("label" (("for" "pref3")))
+								  (("text" " Extreme ")))
+								 ((("dijit" "form.RadioButton" "{iconClass:'dijitRadioIcon'}" () () "div")))))))))
+			 (("td" (("style" "margin:10px; background-color:#DAE6EF")))
+			  (("img" (("src" "images/radiobutton.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:155px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'ComboBox', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("select" (("name" "state1")
+									  ("dojoType" "dijit.form.ComboBox")
+									  ("autocomplete" "false")
+									  ("value" "California")))
+							       (("option" ())
+								(("text" "Illinois")))
+							       (("option" ())
+								(("text" "New York")))
+							       (("option" ())
+								(("text" "Texas")))
+							       (("dijit" "form.ComboBox" "{}" () () "div"))))))))
+			 (("td" (("style" "margin:10px; background-color:#DAE6EF")))
+			  (("img" (("src" "images/combo_box.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:55px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'CurrencyTextBox', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("input" ())
+							       (("dijit"
+								 "form.CurrencyTextBox"
+								 "{required:\"true\", currency:\"USD\" invalidMessage:\"Invalid amount.  Include dollar sign, commas, and cents.\"}"
+								 () () "div"))))))))
+			 (("td" (("style" "margin:10px; background-color:#DAE6EF")))
+			  (("img" (("src" "images/currency_textbox.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:250px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'DateTextBox', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("input" ())
+							       (("dijit" "form.DateTextBox" "{name:\"date1\" value:\"2008-07-09\"}" () () "div"))))))))
+			 (("td" (("style" "margin:10px; background-color:#DAE6EF")))
+			  (("img" (("src" "images/date_textbox.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:150px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'FilteringSelect', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("select" ())
+							       (("dijit" "form.FilteringSelect" "{}" () () "div"))))))))
+			 (("td" (("style" "margin:10px; background-color:#DAE6EF")))
+			  (("img" (("src" "images/filtering_select2.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:60px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'InlineEditBox', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("span" (("value" "Edit me!")
+									("onChange" "zen1.editBoxHandler(this.id,arguments[0])")))
+							       (("dijit" "form.InlineEditBox" "{value:\"Edit me!\", title:\"User-created InlineEditBox\"}" () () "div"))))))))
+			 (("td" (("style" "margin:10px; background-color:#DAE6EF")))
+			  (("img" (("src" "images/inline_edit.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:45px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")))
+			  (("div" ())
+			   (("dijit" "form.Button"
+			     "{label: 'NumberSpinner', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("input" ())
+							       (("dijit" "form.NumberSpinner" "{}" () () "div"))))))))
+			 (("td" (("style" "margin:10px; background-color:#DAE6EF")))
+			  (("img" (("src" "images/number_spinner.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:55px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'NumberTextBox', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("input" ())
+							       (("dijit" "form.NumberTextBox" "{}" () () "div"))))))))
+			 (("td" (("style" "margin:10px; background-color:#DAE6EF")))
+			  (("img" (("src" "images/number_textbox.png") ("style" "border:2px solid #D29090"))))))))))))
+
+	(("div" ())
+	 (("dijit" "layout.AccordionPane" "{selected:false,title:'Layout Widgets'}")
+	  (("content" (("div" (("stylex" "{height:'1630px',width:'100%',backgroundColor:'#DAE6EF'}")))
+		       (("table" (("style" "background-color:#C8C8E0")
+				  ("cellspacing" "0px"))) ;9898B0
+
+			;;;;
+			;;;; Plain ContentPane
+			;;;;
+			(("tr" (("style" "height:135px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Plain ContentPane', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" (("style" "background-color:lightyellow; height:100%; width:100%")
+								       ("title" "dijit ContentPane")))
+							       (("dijit" "layout.ContentPane" "{}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/content_pane.png") ("style" "border:2px solid #D29090"))))))
+
+			;;;;
+			;;;; BorderContainer and ContentPanes for It
+			;;;;
+			(("tr" (("style" "height:150px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'BorderContainer', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" (("style" "background-color:lightgray; width:100%; height:100%")))
+							       (("dijit" "layout.BorderContainer" "{}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/border_container_1.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:135px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Centre ContentPane<br>for BorderContainer', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" (("style" "background-color:blue; height:100%")))
+							       (("dijit" "layout.ContentPane" "{region:'center',layoutAlign:'client'}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/content_pane.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:135px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Top ContentPane<br>for BorderContainer', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" (("style" "background-color:green; height:20%")))
+							       (("dijit" "layout.ContentPane" "{region:'top',layoutAlign:'top'}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/content_pane.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:135px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Bottom ContentPane<br>for BorderContainer', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" (("style" "background-color:yellow; height:20%")))
+							       (("dijit" "layout.ContentPane" "{region:'bottom',layoutAlign:'bottom'}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/content_pane.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:135px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Left ContentPane<br>for BorderContainer', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" (("style" "background-color:orange; width:20%; height:100%")))
+							       (("dijit" "layout.ContentPane" "{region:'left',layoutAlign:'left'}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/content_pane.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:135px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Right ContentPane<br>for BorderContainer', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" (("style" "background-color:red; width:20%; height:100%")))
+							       (("dijit" "layout.ContentPane" "{region:'right',layoutAlign:'right'}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/content_pane.png") ("style" "border:2px solid #D29090"))))))
+
+			;;;;
+			;;;; LayoutContainer and ContentPanes for It
+			;;;;
+			(("tr" (("style" "height:100px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'LayoutContainer', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" (("style" "background-color:lightgray; width:100%; height:100%")))
+							       (("dijit" "layout.LayoutContainer" "{}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/layout_container3.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:135px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Client ContentPane<br>for LayoutContainer', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" (("style" "background-color:blue; height:100%")))
+							       (("dijit" "layout.ContentPane" "{layoutAlign:'client'}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/content_pane.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:135px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Top ContentPane<br>for LayoutContainer', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" (("style" "background-color:green; height:20%")))
+							       (("dijit" "layout.ContentPane" "{layoutAlign:'top'}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/content_pane.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:135px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Bottom ContentPane<br>for LayoutContainer', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" (("style" "background-color:yellow; height:20%")))
+							       (("dijit" "layout.ContentPane" "{layoutAlign:'bottom'}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/content_pane.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:135px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Left ContentPane<br>for LayoutContainer', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" (("style" "background-color:orange; width:20%; height:100%")))
+							       (("dijit" "layout.ContentPane" "{layoutAlign:'left'}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/content_pane.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:135px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Right ContentPane<br>for LayoutContainer', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" (("style" "background-color:red; width:20%; height:100%")))
+							       (("dijit" "layout.ContentPane" "{layoutAlign:'right'}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/content_pane.png") ("style" "border:2px solid #D29090"))))))
+
+			;;;;
+			;;;; TabContainer
+			;;;;
+			(("tr" (("style" "height:120px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'TabContainer', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" (("style" "background-color:gray; width:750px; height:300px")))
+							       (("dijit" "layout.TabContainer" "{style:'width:700px; height:250px'}")
+								(("div" (("style" "background-color:green; width:650px; height:200px")))
+								 (("dijit" "layout.ContentPane" "{title:'Tab 1'}"))))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/tab_container2.png") ("style" "border:2px solid #D29090"))))))
+
+			;;;;
+			;;;; Label for Tab
+			;;;;
+			(("tr" (("style" "height:120px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Label for Tab', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("subpart"
+								"Tab"
+								"div.dijitTabInnerDiv"
+								"div.dijitTabInnerDiv > div.dijitTabContent > span")))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/tab_container2.png") ("style" "border:2px solid #D29090"))))))
+
+
+			;;;;
+			;;;; StackContainer
+			;;;;
+			(("tr" (("style" "height:160px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'StackContainer', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" (("style" "background-color:gray; width:750px; height:300px")))
+							       (("dijit" "layout.StackContainer" "{style:'width:700px; height:250px'}")
+								(("div" (("style" "background-color:green; width:650px; height:200px")))
+								 (("dijit" "layout.ContentPane" "{title:'Tab 1'}"))))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/stack_container2.png") ("style" "border:2px solid #D29090"))))))
+
+			;;;;
+			;;;; AccordionContainer and AccordionPane
+			;;;;
+			(("tr" (("style" "height:145px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'AccordionContainer', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" (("style" "background-color:lightgray; width:100%; height:100%")))
+							       (("dijit" "layout.AccordionContainer" "{}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/accordion_pane2.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:145px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'AccordionPane', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" (("style" "background-color:pink; height:40px")))
+							       (("dijit" "layout.AccordionPane" "{title:'AccordionPane'}" () () "divx")
+								(("div" (("stylex" "{style:'height:40px'}")))))))
+			     ()
+			     "div.dijitAccordionContainer"))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/accordion_pane2.png") ("style" "border:2px solid #D29090"))))))))))))
+
+
+	(("div" ())
+	 (("dijit" "layout.AccordionPane" "{selected:false,title:'Command/Control Widgets'}")
+	  (("content" (("div" (("stylex" "{height:'400px',width:'100%',backgroundColor:'#DAE6EF'}")))
+		       (("table" (("style" "background-color:#C8C8E0")
+				  ("cellspacing" "0px"))) ;9898B0
+
+			(("tr" (("style" "height:65px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Dojo-ized Button', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("input" ())
+							       (("dijit" "form.Button" "{label: 'This is a Dojo button', onClick: zen1.testGreeting}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/button2.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:260px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Dojo-ized Menu', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("input" ())
+							       (("dijit" "Menu" "{}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/menu2.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:110px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Toolbar', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("input" ())
+							       (("dijit" "Toolbar" "{}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/toolbar.png") ("style" "border:2px solid #D29090"))))))))))))
+
+	(("div" ())
+	 (("dijit" "layout.AccordionPane" "{selected:false,title:'User Assistance and Feedback Widgets'}")
+	  (("content" (("div" (("stylex" "{height:'650px',width:'100%',backgroundColor:'#DAE6EF'}")))
+		       (("table" (("style" "background-color:#C8C8E0")
+				  ("cellspacing" "0px"))) ;9898B0
+
+			(("tr" (("style" "height:140px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Dialog Box', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("div" ())
+							       (("dijit" "Dialog" "{}" () () "div")
+								(("div" (("stylex" "{height:'100px',width:'50px',backgroundColor:'green'}")))))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/dialog_box5.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:175px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'TooltipDialog', onClick: zen1.storeSexp}"))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/tooltipDialog_1.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:135px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'ProgressBar', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("input" ())
+							       (("dijit" "ProgressBar" "{}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/progress_bar2.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:145px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'TitlePane', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("input" ())
+							       (("dijit" "TitlePane" "{}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/title_pane_6.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:55px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Tooltip', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("input" ())
+							       (("dijit" "Tooltip" "{}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/tooltip.png") ("style" "border:2px solid #D29090"))))))))))))
+
+	(("div" ())
+	 (("dijit" "layout.AccordionPane" "{selected:false,title:'Advanced Editing and Display Widgets'}")
+	  (("content" (("div" (("stylex" "{height:'790px',width:'100%',backgroundColor:'#DAE6EF'}")))
+		       (("table" (("style" "background-color:#C8C8E0")
+				  ("cellspacing" "0px"))) ;9898B0
+
+			(("tr" (("style" "height:195px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'ColorPalette', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("input" ())
+							       (("dijit" "ColorPalette" "{}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/color_picker.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:145px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Editor', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("input" ())
+							       (("dijit" "Editor" "{}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/editor_4.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:270px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Grid', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("input" ())
+							       (("dojox" "grid.data.DojoData" "{}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/grid_terms6.gif") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:55px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'InlineEditBox', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("input" ())
+							       (("dijit" "InlineEditBox" "{}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/inline_edit.png") ("style" "border:2px solid #D29090"))))))
+
+			(("tr" (("style" "height:155px")))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("align" "right")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("div" ())
+			   (("dijit" "form.Button" "{label: 'Tree', onClick: zen1.storeSexp}"
+			     (insert-dom-branch-at-selection '(("input" ())
+							       (("dijit" "Tree" "{}" () () "div"))))))))
+			 (("td" (("style" "background-color:#DAE6EF")
+				 ("border" "4px")
+				 ("frame" "below")))
+			  (("img" (("src" "images/tree_4.png") ("style" "border:2px solid #D29090")))))))))))))))
+
+     (("dojox"
+       "layout.FloatingPane"
+       "{title:'Dojo Widgets',resizable:false,dockable:true,closable:true,style:'width:412px;height:502px;top:30px;right:200px;z-index:6;'}"
+       )))))
+
+(insert-dom-branches *default-page-description* *toolbox-insertion-point*)

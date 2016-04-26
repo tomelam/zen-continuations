@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Zen-user web page</title>
+    <script type="text/javascript" src="../dojo/dojo/dojo.js"
+	    djConfig="parseOnLoad: true, isDebug: true"></script>
+    <script type="text/javascript">
+      var connect_button1 = function() {
+	  // The variables in the parent window cannot be referred
+	  // without prepending their scope.
+	  dojo.connect(dojo.byId("button1"), "onclick",
+		       make_handler(parent.getHandlers().length + 1));
+      };
+      var make_handler = function(number) {
+	  return function() { alert("Click handler #" + number); };
+      };
+      var zen_user_init = function() {
+	  dojoi = dojo; // 'i' for 'iframe'.
+      };
+      dojo.addOnLoad(zen_user_init);
+    </script>
+  </head>
+  <body>
+    <div style="height:700px">
+      <h2>Zen-user web page</h2>
+      <button id="button1">button1</button>
+      <button id="button2" onclick="connect_button1()">
+	Connect button1's<br/>onclick event
+      </button>
+    </div>
+    <div id="diagramDiv"
+         style="width:100%; height:200px; background-color:pink"></div>
+  </body>
+</html>
