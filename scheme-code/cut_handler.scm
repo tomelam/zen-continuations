@@ -1,0 +1,28 @@
+;;(set-handler! (js-eval "frames[0].document.childNodes[1]")) ; Empty procedure
+(define cont #f)
+(define (handler this event)
+  (display "handler: ")
+  (display "click on tag: ")
+  (display (get-prop this "tagName"))
+  (display ", with id: ")
+  (display (get-prop this "id"))
+  (newline)
+  (let ((i 0))
+    (call/cc (lambda (k) (set! cont k)))
+    ;;(define (handler this event)) ; FIXME: Invent something so this isn't necessary.
+    (set! i (+ i 1))
+    (display i)
+    (newline)
+    (set-handler! (js-eval "frames[0].document.childNodes[1]") "onclick" handler2)
+    i))
+(define (handler2 this event)
+  ;;(define (handler this event)) ; FIXME: This doesn't work.
+  (display "handler2: ")
+  (display "click on tag: ")
+  (display (get-prop this "tagName"))
+  (display ", with id: ")
+  (display (get-prop this "id"))
+  (newline)
+  (cont))
+(set-handler! (js-eval "document.getElementById('zen_canvas')") "onclick" handler)
+
