@@ -4,11 +4,13 @@
 ;; You will see that although the event handler remains active,
 ;; "DIV was clicked" is only printed once. Thus it can be seen
 ;; that the function passed to when-cut-is-pressed waits for a
-;; 
-
-(define cont #f)
+;; button press.
+;;
+;; FIXME: This is broken.
 
 (define first-call #t)
+
+(define cont #f)
 
 (define (handler this event)
   (display "handler: ")
@@ -28,9 +30,6 @@
   (do-this))
 
 (when-cut-is-pressed
- (lambda ()))
-
-(when-cut-is-pressed
  (lambda ()
    (display "DIV was clicked")
    (newline)
@@ -38,3 +37,6 @@
     (lambda ()
       (display "DIV was clicked again")
       (newline)))))
+
+(set-handler! (js-eval "document.getElementById('zen_canvas')") "onclick" handler)
+
