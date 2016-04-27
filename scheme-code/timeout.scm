@@ -1,0 +1,5 @@
+(define (timeout)
+  (display "Time out"))
+(display "Calling set-timeout!")
+(set-timeout! timeout 5000)
+(display "After call to set-timeout!")

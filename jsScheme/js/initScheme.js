@@ -202,4 +202,4 @@ connectGUI = function() {
   init(jslib.byId("symbols"), "out", "log");
 };
 
-//jslib.addDomReadyCallback(connectGUI);
+jslib.addDomReadyCallback(connectGUI);
