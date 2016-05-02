@@ -1147,6 +1147,7 @@ TopEnv['gen-sym'] = function() { return getSymbol('_'+(genSymBase++)+'_'); }
 
 var res = null;
 clickEval = function(txt, symbolTable, outputElementId) {
+  console.log("clickEval: " + txt);
   var o, time0=new Date();
   TopParser = new Parser( txt );
 

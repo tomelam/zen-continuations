@@ -1,6 +1,11 @@
-// The beginnings of a cut handler for a move operation. Currently unused.
+// The beginnings of a cut handler for a move operation.
 
-mousedown_handler = function() { alert("Paste!"); };
+body_click_handler = function() { alert("Body click!"); clickEval("(body-click)"); };
+
+cut_handler = function() { alert("Cut!"); clickEval("(handle-cut)"); };
+
+paste_handler = function() { alert("Paste!"); clickEval("(cont2)"); };
+
 whichElement = function(e) {
     var targ;
     if (!e) {
@@ -15,4 +20,3 @@ whichElement = function(e) {
     tname = targ.tagName;
     alert("You clicked on a " + tname + " element.");
 }
-

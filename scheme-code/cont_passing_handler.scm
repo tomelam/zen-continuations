@@ -1,3 +1,8 @@
+;; This was a kind of "big bang" approach to getting a coordinated series of
+;; continuations to handle a complex user interaction -- but I haven't
+;; finished writing the code. I need to fall back to the smallest possible
+;; steps and get the pieces to work one by one.
+
 (define cont #f)
 (define i 0)
 

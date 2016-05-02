@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
-scheme_dojo.html - Scheme in JavaScript, with a mousedown handler and a canvas
+scheme_canvas.html - Scheme in JavaScript, with a mousedown handler and a canvas
 Copyright (C) 2009  Tom Elam
 Copyright (C) 2006  Chris Double
 Copyright (C) 2003  Alex Yakovlev
@@ -25,7 +25,7 @@ without any warranty.
 </head>
 <body>
 
-<h1>Scheme in JavaScript: Demo Employing Dojo</h1>
+<h1>Scheme in JavaScript: The Web Page as a Canvas</h1>
 <table width="70%" border="0" cellspacing="0" cellpadding="3">
 <tr>
 <td width="25%">
@@ -42,9 +42,10 @@ without any warranty.
 </td>
 </table>
 <div style="width:100%; height:120px; background-color:Aquamarine;">
-  <button id="move" onclick="mousedown_handler();">MOVE</button><br />
+  <button id="cut" onclick="cut_handler();">CUT</button><br />
+  <button id="move" onclick="paste_handler();">MOVE</button><br />
   Zen Canvas<br />
-  <div id="zen_canvas">
+  <div id="zen_canvas" onclick="canvas_click_handler();">
   <div id="test div 1" style="float:left; width:50px; height:50px; background-color:pink;">DIV_1</div>
   <div id="test div 2" style="float:left; width:50px; height:50px; background-color:lightgreen;">DIV_2</div>
   <div id="test div 3" style="float:left; width:50px; height:50px; background-color:lightblue;">DIV_3</div>
