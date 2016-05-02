@@ -1,6 +1,6 @@
 // The beginnings of a cut handler for a move operation.
 
-body_click_handler = function() { alert("Body click!"); clickEval("(body-click)"); };
+canvas_click_handler = function() { alert("Canvas click!"); clickEval("(handle-canvas-click)"); };
 
 cut_handler = function() { alert("Cut!"); clickEval("(handle-cut)"); };
 

@@ -1,5 +1,10 @@
+;; Not yet working.
 (define handle-cut #f)
-(define handle-click-canvas #f)
+(define handle-canvas-click #f)
+
+(define (say-here foo)
+  (display "here")
+  (newline))
 
 (define (when-cut)
   (call/cc
@@ -9,6 +14,8 @@
 (define (when-click-canvas)
   (call/cc
    (lambda (k)
-     (set! handle-click-canvas k))))
+     (set! handle-canvas-click k))))
 
-(when-click-canvas (when-cut))
+(say-here (when-cut))
+
+(say-here (when-click-canvas))
