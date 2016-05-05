@@ -1182,6 +1182,7 @@ require(['dojo/_base/declare'], function(declare) {
     z.dynStyleSheets = [];
 })(zen);
 
+//FIXME: How was I proposing to use this? Why keep a flattened list of domNodeCompons?
 zen.DomNodeCompon.domNodeCompons = [];
 
 zen.DomNodeCompon.getCount = function() {

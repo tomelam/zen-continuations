@@ -16,7 +16,7 @@ try {
 	zen.registry = { DomNodeCompon : {} };
 	zen.DomNodeCompon.domNodeCompons = [];
     }
-    //dojo.require("zen.test_snapshooter");
+    //dojo.require("zen.test_snapshooter"); //This requires assistance from the web server.
     dojo.require("zen.test_creator");
     dojo.require("zen.test_domnodecompon");
     dojo.require("zen.test_zentree");

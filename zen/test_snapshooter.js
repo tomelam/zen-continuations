@@ -3,7 +3,7 @@ dojo.provide("zen.test_snapshooter");
 dojo.require("dojox.html.styles");
 dojo.require("zen");
 dojo.require("zen.dojo");
-dojo.require("zen.cssParser");
+//dojo.require("zen.cssParser");
 
 //// To poke around in the iframe where this test changes the DOM,
 //// use zen.getRemotePageHandle('testBody') followed by zen.getRemotePageHandle('tdoc', idoc)
