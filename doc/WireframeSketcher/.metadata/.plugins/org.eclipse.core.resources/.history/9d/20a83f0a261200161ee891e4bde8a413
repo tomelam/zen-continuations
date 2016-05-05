@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Label" id="17" x="1" y="8" width="712" text="Here’s what you can do with Zen-web applications" measuredWidth="712" measuredHeight="29" textAlignment="Center" foreground="#0000ff">
+    <font size="18px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Browser" id="1" y="45" width="713" height="593" text="Nikhi's First Zen-Web Application&#xA;http://nikhil.otsp.com" measuredWidth="713" measuredHeight="593" verticalScrollbar="true">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="2" x="11" y="114" measuredWidth="219" measuredHeight="45">
+    <screen xsi:type="model:Screen" href="assets/logo.screen#/"/>
+    <overrides>
+      <widgets ref="2" text="Nikhil's Notebook"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:LinkBar" id="3" x="368" y="125" text="Scratch,To-Do,Blog,Collaborate,About" measuredWidth="294" measuredHeight="23">
+    <font/>
+    <items x="0" y="0" width="47" height="23" text="Scratch"/>
+    <items x="65" y="0" width="39" height="23" text="To-Do"/>
+    <items x="122" y="0" width="29" height="23" text="Blog"/>
+    <items x="169" y="0" width="69" height="23" text="Collaborate"/>
+    <items x="256" y="0" width="37" height="23" text="About"/>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="4" x="1" y="173" width="696" height="289" measuredWidth="696" measuredHeight="289" background="#666666" border="none"/>
+  <widgets xsi:type="model:Placeholder" id="5" x="382" y="189" width="294" height="241" text="Screenshot" measuredWidth="294" measuredHeight="241"/>
+  <widgets xsi:type="model:Placeholder" id="6" x="20" y="517" width="201" height="105" measuredWidth="201" measuredHeight="105"/>
+  <widgets xsi:type="model:Label" id="7" x="21" y="474" width="200" text="Mockup anything" measuredWidth="200" measuredHeight="32" icon="email (large)">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Placeholder" id="8" x="248" y="517" width="202" height="105" measuredWidth="202" measuredHeight="105"/>
+  <widgets xsi:type="model:Label" id="9" x="249" y="474" width="201" text="Get results fast" measuredWidth="201" measuredHeight="32" icon="refresh (large)">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Placeholder" id="10" x="477" y="517" width="201" height="105" measuredWidth="201" measuredHeight="105"/>
+  <widgets xsi:type="model:Label" id="11" x="478" y="474" width="200" text="Collaborate effortlessly" measuredWidth="200" measuredHeight="32" icon="computer (large)">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="12" x="240" y="653" width="215" text="Next screen" measuredWidth="215" measuredHeight="25" background="#6aa84f" link="Extend.screen" style="pointright">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Text" id="13" x="20" y="189" width="349" height="180" text="h4. The First Page of My Zen Notebook&#xA;&#xA;* Link bar to go to different notebook sections&#xA;* Get quality feedback fast&#xA;* Build better software&#xA;* Involve your entire team!" measuredWidth="349" measuredHeight="180" foreground="#ffffff">
+    <font size="14px"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="14" x="38" y="396" width="115" height="36" text="Try it now" measuredWidth="115" measuredHeight="36">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="15" x="220" y="396" width="115" height="36" text="Take a tour" measuredWidth="115" measuredHeight="36">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="16" x="175" y="402" text="or" measuredWidth="21" measuredHeight="26" foreground="#ffffff">
+    <font size="16px"/>
+  </widgets>
+  <widgets xsi:type="model:TabbedPane" id="18" x="-224" y="752" width="665" height="507" text="Tab One,Tab Two,Tab Three" measuredWidth="665" measuredHeight="507" selection="0">
+    <items x="10" y="0" width="69" height="27" text="Tab One"/>
+    <items x="79" y="0" width="69" height="27" text="Tab Two"/>
+    <items x="148" y="0" width="78" height="27" text="Tab Three"/>
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

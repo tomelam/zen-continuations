@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Label" id="17" x="1" y="8" width="712" text="Here’s what you can do with Zen-web applications" measuredWidth="712" measuredHeight="29" textAlignment="Center" foreground="#0000ff">
+    <font size="18px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Browser" id="1" y="45" width="793" height="660" text="Nikhi's First Zen-Web Application&#xA;http://nikhil.otsp.com" measuredWidth="793" measuredHeight="660" verticalScrollbar="true">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="2" x="11" y="114" measuredWidth="219" measuredHeight="45">
+    <screen xsi:type="model:Screen" href="assets/logo.screen#/"/>
+    <overrides>
+      <widgets ref="2" text="Nikhil's Notebook"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:LinkBar" id="3" x="360" y="136" text="Scratch,To-Do,Blog,Collaborate,About" measuredWidth="294" measuredHeight="23">
+    <font/>
+    <items x="0" y="0" width="47" height="23" text="Scratch"/>
+    <items x="65" y="0" width="39" height="23" text="To-Do"/>
+    <items x="122" y="0" width="29" height="23" text="Blog"/>
+    <items x="169" y="0" width="69" height="23" text="Collaborate"/>
+    <items x="256" y="0" width="37" height="23" text="About"/>
+  </widgets>
+  <widgets xsi:type="model:Placeholder" id="6" x="16" y="536" width="201" height="105" text="Links" measuredWidth="201" measuredHeight="105"/>
+  <widgets xsi:type="model:Label" id="7" x="30" y="656" width="200" text="Email" measuredWidth="200" measuredHeight="32" icon="email (large)">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Placeholder" id="8" x="248" y="536" width="202" height="105" text="Images" measuredWidth="202" measuredHeight="105"/>
+  <widgets xsi:type="model:Label" id="9" x="120" y="656" width="201" text="Scan" measuredWidth="201" measuredHeight="32" icon="refresh (large)">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Placeholder" id="10" x="484" y="536" width="201" height="105" text="Files" measuredWidth="201" measuredHeight="105"/>
+  <widgets xsi:type="model:Label" id="11" x="230" y="656" width="200" text="Collaborate" measuredWidth="200" measuredHeight="32" icon="computer (large)">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Text" id="13" x="272" y="704" width="349" height="180" text="h4. The First Page of My Zen Notebook&#xA;&#xA;* Link bar to go to different notebook sections&#xA;* Get quality feedback fast&#xA;* Build better software&#xA;* Involve your entire team!" measuredWidth="349" measuredHeight="180" foreground="#ffffff">
+    <font size="14px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="16" x="175" y="402" text="or" measuredWidth="21" measuredHeight="26" foreground="#ffffff">
+    <font size="16px"/>
+  </widgets>
+  <widgets xsi:type="model:TabbedPane" id="18" x="20" y="176" width="665" height="337" text="Scratch,Scanner,To-Do,Blog,Collaborate,About" measuredWidth="665" measuredHeight="337" selection="0">
+    <items x="10" y="0" width="65" height="27" text="Scratch"/>
+    <items x="75" y="0" width="68" height="27" text="Scanner"/>
+    <items x="143" y="0" width="57" height="27" text="To-Do"/>
+    <items x="200" y="0" width="47" height="27" text="Blog"/>
+    <items x="247" y="0" width="87" height="27" text="Collaborate"/>
+    <items x="334" y="0" width="55" height="27" text="About"/>
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Text" id="24" x="48" y="232" width="606" height="241" text="h4. The First Page of My Zen Notebook&#xA;&#xA;* Link bar at top right to jump to the end of a different notebook section and start a new page&#xA;* Scratch section for quick, messy, stream-of-conscious notes&#xA;* Scanner to alert me to news in my areas of interest&#xA;* To-do list&#xA;* Blog or diary&#xA;* Collaboration section open to editing by Tom&#xA;* About section to explain a bit about this web site&#xA;* Drop area for nice web links&#xA;* Drop area for nice images&#xA;* Drop area for miscellaneous files" measuredWidth="606" measuredHeight="241">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="25" x="2" y="21" text="Label" measuredWidth="37" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="27" x="360" y="114" text="Start a new page in one of these sections:" measuredWidth="244" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Breadcrumbs" id="28" x="395" y="480" text="Home,Previous Page,Next Page,Page 1" measuredWidth="280" measuredHeight="23">
+    <font/>
+    <items x="0" y="0" width="35" height="23" text="Home"/>
+    <items x="55" y="0" width="82" height="23" text="Previous Page"/>
+    <items x="157" y="0" width="59" height="23" text="Next Page"/>
+    <items x="236" y="0" width="41" height="23" text="Page 1"/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
